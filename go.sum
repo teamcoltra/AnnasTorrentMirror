@@ -1,0 +1,4 @@
+github.com/etix/goscrape v0.0.0-20180731120256-0265a7239aef h1:9JK9zOFcMiv7ZGTjwLMqP+HtPIBxKQAc6d7FkZl+DzA=
+github.com/etix/goscrape v0.0.0-20180731120256-0265a7239aef/go.mod h1:kAgResQP1iYTrEi40ehz9KQMDv/14kzYQu1WXzEbf/8=
+github.com/mattn/go-sqlite3 v1.14.22 h1:2gZY6PC6kBnID23Tichd1K+Z0oS6nE/XwU+Vz/5o4kU=
+github.com/mattn/go-sqlite3 v1.14.22/go.mod h1:Uh1q+B4BYcTPb+yiD3kU8Ct7aC0hY9fxUwlHK0RXw+Y=
