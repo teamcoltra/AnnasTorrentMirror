@@ -23,7 +23,7 @@ You can just go to the releases and download the binary and skip the installatio
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/annas-archive-mirror.git
+   git clone https://github.com/teamcoltra/annas-archive-mirror.git
    ```
 
 2. Navigate to the project directory:
