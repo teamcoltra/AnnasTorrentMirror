@@ -1122,7 +1122,7 @@ func getTemplateContent(name string) string {
 			<td>{{.StatusLabel}}</td>
 			<td><a href="{{.MagnetLink | urlsafe}}">Magnet</a></td>
 			<td>
-				{{if $.Torrents}}
+				{{if torrentsEnabled}}
 					<a href="/assets/torrents/{{.BTIH}}.torrent">Torrent</a>
 				{{else}}
 					<a href="{{.URL}}">Torrent</a>
@@ -1148,11 +1148,11 @@ func getTemplateContent(name string) string {
 		<tr><td>Size</td><td>{{.FormattedDataSize}}</td></tr>
 		<tr><td>Magnet Link</td><td><a href="{{.MagnetLink | urlsafe}}">Magnet</a></td></tr>
 		<tr><td>Torrent Link</td><td>
-			{{if $.Torrents}}
-				<a href="/assets/torrents/{{.BTIH}}.torrent">Torrent</a>
-			{{else}}
-				<a href="{{.URL}}">Torrent</a>
-			{{end}}
+			{{if torrentsEnabled}}
+					<a href="/assets/torrents/{{.BTIH}}.torrent">Torrent</a>
+				{{else}}
+					<a href="{{.URL}}">Torrent</a>
+				{{end}}
 		</td></tr>
 		<tr><td>Last Update</td><td>{{.StatsScrapedAt}}</td></tr>
 	</table>
