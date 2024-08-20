@@ -31,23 +31,33 @@ You can just go to the releases and download the binary and skip the installatio
    cd annas-archive-mirror
    ```
 
-3. Build the application (see Building section below).
+3. Build and Setup the Application:
+
+```
+sudo chmod +x install.sh
+sudo install.sh
+```
 
 4. Run the application:
    ```
-   ./annas-archive-mirror
+   sudo systemctl start annas-torrents.service
    ```
+or
+ ```
+   ./annas-torrents
+   ```
+
 
 5. Access the web interface by opening a browser and navigating to `http://localhost:8080`
 
-## Building
+## Build Yourself
 
 This application uses CGO and requires GCC to be installed on your system. Follow these steps to build the application:
 
 1. Install Go (version 1.16 or later) from [golang.org](https://golang.org/)
 
 2. Install GCC:
-   - On Ubuntu/Debian: `sudo apt-get install build-essentials`
+   - On Ubuntu/Debian: `sudo apt-get install build-essential`
    - On macOS: Install Xcode Command Line Tools
    - On Windows: Install MinGW-w64 (I didn't need to do this but other guides say you do)
 
@@ -95,6 +105,7 @@ Example:
      - `/stats/{btih}`: Detailed statistics for a specific torrent
      - `/json`: Full torrent list in JSON format
      - `/generate-torrent-list`: Endpoint for generating custom torrent lists
+	 - `/assets`: Serves everything in the assets folder within --directory (so ./assets by default) 
 
 5. **Visualization**:
    - It uses Chart.js to create visual representations of seeder statistics.
